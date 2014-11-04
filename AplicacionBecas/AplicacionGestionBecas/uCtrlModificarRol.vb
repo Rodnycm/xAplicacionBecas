@@ -146,9 +146,9 @@ Public Class uCtrlModificarRol
         Next
 
 
-        For i As Integer = 0 To listaIdROlesPermisos.Count - 1
-            objGestorRol.eliminarPermisoAUnRol(listaIdROlesPermisos.Item(i))
-        Next
+        'For i As Integer = 0 To listaIdROlesPermisos.Count - 1
+        '    objGestorRol.eliminarPermisoAUnRol(listaIdROlesPermisos.Item(i))
+        'Next
 
     End Sub
 

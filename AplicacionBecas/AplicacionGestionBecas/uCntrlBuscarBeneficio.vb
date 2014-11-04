@@ -6,7 +6,16 @@ Public Class uCntrlBuscarBeneficio
 
     Private Sub PantallaConsultarBeneficio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        listarBeneficios()
+        Try
+            listarBeneficios()
+
+        Catch
+
+
+
+        End Try
+
+
 
     End Sub
 
@@ -17,7 +26,9 @@ Public Class uCntrlBuscarBeneficio
     ''' <author>Mathias Muller</author>
     Public Sub listarBeneficios()
 
+
         Try
+
 
             Dim listaBeneficios As New List(Of Beneficio)
             listaBeneficios = objGestorBeneficio.buscarBeneficios()
@@ -30,20 +41,22 @@ Public Class uCntrlBuscarBeneficio
                 dtaBuscarBeneficio.Columns("dtaId").Visible = False
 
             Next
+
         Catch ex As Exception
 
-            Dim Uctrl As UctrlAlerta = New UctrlAlerta
-            Me.Controls.Add(Uctrl)
-            Uctrl.lblAlerta.Text = ex.Message
-            Uctrl.Location = New Point(300, 100)
-            Uctrl.BringToFront()
-            Uctrl.Show()
+            Dim UCtrl As UctrlAlerta = New UctrlAlerta()
 
+            FrmIniciarSesion.principal.Controls.Add(UCtrl)
+            UCtrl.lblAlerta.Text = ex.Message
+            UCtrl.Location = New Point(300, 100)
+            UCtrl.BringToFront()
+            UCtrl.Show()
 
         End Try
 
-    End Sub
 
+
+    End Sub
     Private Sub btnMantenimiento_Click(sender As Object, e As EventArgs) Handles btnMantenimiento.Click
         Dim uCtrlRegistrarBeneficio As New uCtrlRegistrarBeneficio
 
@@ -55,7 +68,6 @@ Public Class uCntrlBuscarBeneficio
 
 
     End Sub
-
     ''' <summary>
     ''' Este método agarra el valor seleccionado del combobox y crea un evento
     ''' </summary>
@@ -107,7 +119,7 @@ Public Class uCntrlBuscarBeneficio
         End If
 
     End Sub
-    
+
     '//////////////////////////////////////////////////////////////////////////////////////////
     'El ASIGNAR AHORA LO HACE MARIA, NO VA AQUI EN BENEFICIOS!!!!
 
@@ -124,20 +136,19 @@ Public Class uCntrlBuscarBeneficio
     '//////////////////////////////////////////////////////////////////////////////////////////
 
     ''' <summary>
-    ''' 
+    ''' Muestra un beneficio en un data gird
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub verBeneficios()
         Dim nombre As String = dtaBuscarBeneficio.CurrentRow.Cells(1).Value
 
-        Dim uCtrlConsultarBeneficio As New uCtrlConsultarBeneficio
 
-        uCtrlConsultarBeneficio.recibirInfo(nombre)
-        frmPrincipal.Controls.Add(uCtrlConsultarBeneficio)
-        uCtrlConsultarBeneficio.BringToFront()
-        uCtrlConsultarBeneficio.Show()
-        uCtrlConsultarBeneficio.Location = New Point(200, 150)
+        dtaBuscarBeneficio.Rows.Clear()
+
+
         Me.Hide()
+        Me.Dispose()
+
 
 
     End Sub
@@ -160,7 +171,7 @@ Public Class uCntrlBuscarBeneficio
         Dim uCtrlModificarBeneficio As New uCtrlModificarBeneficio
 
 
-        frmPrincipal.Controls.Add(uCtrlModificarBeneficio)
+        FrmIniciarSesion.principal.Controls.Add(uCtrlModificarBeneficio)
         uCtrlModificarBeneficio.getFrmBuscar(Me)
         uCtrlModificarBeneficio.recieveData(id, nombre, porcentaje, aplicacion)
         uCtrlModificarBeneficio.BringToFront()
@@ -186,8 +197,9 @@ Public Class uCntrlBuscarBeneficio
 
         Dim uCtrlEliminarBeneficio As New uCtrlEliminarBeneficio
 
-        frmPrincipal.Controls.Add(uCtrlEliminarBeneficio)
+        FrmIniciarSesion.principal.Controls.Add(uCtrlEliminarBeneficio)
         uCtrlEliminarBeneficio.getUCtrlInstance(Me)
+        uCtrlEliminarBeneficio.lblEliminar.Text = "¿Esta seguro que desea eliminar el beneficio?"
         uCtrlEliminarBeneficio.recibirInfo(id, nombre, porcentaje, aplicacion)
         uCtrlEliminarBeneficio.BringToFront()
         uCtrlEliminarBeneficio.Show()

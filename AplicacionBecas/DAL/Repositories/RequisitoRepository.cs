@@ -13,6 +13,7 @@ namespace DAL.Repositories
 {
     public class RequisitoRepository : IRepository<Requisito>
     {
+        public string actividad;
         private static RequisitoRepository instance;
         private List<IEntity> _insertItems;
         private List<IEntity> _deleteItems;
@@ -239,6 +240,9 @@ namespace DAL.Repositories
 
                 DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_crearRequisito");
 
+                actividad = "Se ha Registrado un Requisito";
+                registrarAccion(actividad);
+
             }
             catch (Exception ex)
             {
@@ -258,10 +262,10 @@ namespace DAL.Repositories
 
                 cmd.Parameters.Add(new SqlParameter("@nombre", objRequisito.nombre));
                 cmd.Parameters.Add(new SqlParameter("@ubicacion", objRequisito.descripcion));
-
-
-
                 DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "");
+
+                actividad = "Se ha Editado un Requisito";
+                registrarAccion(actividad);
 
             }
             catch (Exception ex)
@@ -280,7 +284,10 @@ namespace DAL.Repositories
             {
                 SqlCommand cmd = new SqlCommand();
                 cmd.Parameters.Add(new SqlParameter("@", objRequisito.Id));
-                DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "pa_borrar_Musculo");
+                DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "");
+
+                actividad = "Se ha Eliminado un Requisito";
+                registrarAccion(actividad);
 
             }
             catch (SqlException ex)
@@ -294,6 +301,32 @@ namespace DAL.Repositories
                 //logear la excepcion a la bd con un Exception
                 //throw new DataAccessException("Ha ocurrido un error al eliminar un usuario", ex);
             }
+        }
+
+        public void registrarAccion(string pactividad)
+        {
+
+            RegistroAccion objRegistro;
+            DateTime fecha = DateTime.Today;
+            string nombreUsuario = Globals.userName;
+            string nombreRol = Globals.userRol.Nombre;
+            string descripcion = pactividad;
+
+
+            objRegistro = new RegistroAccion(nombreUsuario, nombreRol, descripcion, fecha);
+
+            try
+            {
+
+                RegistroAccionRepository objRegistroRep = new RegistroAccionRepository();
+                objRegistroRep.InsertAccion(objRegistro);
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+
         }
 
     }

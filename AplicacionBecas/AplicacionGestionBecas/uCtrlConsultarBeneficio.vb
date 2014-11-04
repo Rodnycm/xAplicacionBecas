@@ -20,12 +20,10 @@ Public Class uCtrlConsultarBeneficio
 
         dtaConsultarBeneficio.Rows.Add(1)
 
-        dtaConsultarBeneficio.Rows(0).Cells(0).Value = beneficio.id
-        dtaConsultarBeneficio.Rows(0).Cells(1).Value = beneficio.Nombre
-        dtaConsultarBeneficio.Rows(0).Cells(2).Value = beneficio.Porcentaje
-        dtaConsultarBeneficio.Rows(0).Cells(3).Value = beneficio.Aplicacion
-        'dtaConsultarBeneficio.Columns("dtaAplicabilidad").Visible = False
-        dtaConsultarBeneficio.Columns("dtaId").Visible = False
+        dtaConsultarBeneficio.Rows(0).Cells(0).Value = beneficio.Nombre
+        dtaConsultarBeneficio.Rows(0).Cells(1).Value = beneficio.Porcentaje
+        dtaConsultarBeneficio.Rows(0).Cells(2).Value = beneficio.Aplicacion
+
 
     End Sub
 
@@ -41,4 +39,15 @@ Public Class uCtrlConsultarBeneficio
 
     End Sub
 
+    Private Sub btnVolver_Click(sender As Object, e As EventArgs) Handles btnVolver.Click
+        Me.Hide()
+        Me.Dispose()
+
+        Dim uctrl As uCntrlBuscarBeneficio = New uCntrlBuscarBeneficio
+        FrmIniciarSesion.principal.Controls.Add(uctrl)
+        uctrl.Show()
+        uctrl.Location = New Point(130, 50)
+
+
+    End Sub
 End Class

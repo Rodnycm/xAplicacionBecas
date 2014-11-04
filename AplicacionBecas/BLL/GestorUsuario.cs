@@ -21,6 +21,7 @@ namespace BLL
         private static string PASSWORD_CHARS_UCASE = "ABCDEFGHJKLMNPQRSTWXYZ";
         private static string PASSWORD_CHARS_NUMERIC = "23456789";
 
+
         //<summary> Método que se encarga de crear un nuevo usuario</summary>
         //<author> Gabriela Gutiérrez Corrales </author> 
         //<param name = "ppNombre"> variable de tipo String que almacena el primer nombre del usuario  </param>

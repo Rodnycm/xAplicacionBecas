@@ -32,14 +32,38 @@
             porcentaje = CType(txPorcentaje.Text, Double)
             asociacion = txtAplicacion.Text
 
-            objGestorBeneficio.agregarBeneficio(nombre, porcentaje, asociacion)
-            objGestorBeneficio.guardarCambios()
+            Try
+                objGestorBeneficio.agregarBeneficio(nombre, porcentaje, asociacion)
+                objGestorBeneficio.guardarCambios()
 
-            MsgBox("El Beneficio se creo correctamente")
+                Dim Uctrl As uCtrlConfirmacion = New uCtrlConfirmacion
+                FrmIniciarSesion.principal.Controls.Add(Uctrl)
+                Uctrl.lblConfirmacion.Text = "El beneficio se registro correctamente"
+                Uctrl.Location = New Point(300, 100)
+                Uctrl.BringToFront()
+                Uctrl.Show()
+
+            Catch ex As Exception
+
+                Dim UCtrl As UCtrlAlerta = New UCtrlAlerta()
+
+                FrmIniciarSesion.principal.Controls.Add(UCtrl)
+                UCtrl.lblAlerta.Text = ex.Message
+                UCtrl.Location = New Point(300, 100)
+                UCtrl.BringToFront()
+                UCtrl.Show()
+
+            End Try
 
         Else
 
-            MsgBox("El Porcentaje debe ser un numero")
+            Dim UCtrl As UCtrlAlerta = New UCtrlAlerta()
+
+            FrmIniciarSesion.principal.Controls.Add(UCtrl)
+            UCtrl.lblAlerta.Text = "El porcentaje debe ser un numero"
+            UCtrl.Location = New Point(300, 100)
+            UCtrl.BringToFront()
+            UCtrl.Show()
 
         End If
 
