@@ -49,6 +49,7 @@ C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\bin\Debug\
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.Alerts.resources
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.Properties.Resources.resources
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.csproj.GenerateResource.Cache
+<<<<<<< HEAD
 C:\Users\Prophet\Desktop\Nueva carpeta\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\BLL\bin\Debug\BLL.dll
 C:\Users\Prophet\Desktop\Nueva carpeta\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\BLL\bin\Debug\BLL.pdb
 C:\Users\Prophet\Desktop\Nueva carpeta\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\BLL\bin\Debug\DAL.dll
@@ -91,3 +92,24 @@ R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.Properties.Re
 R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.csproj.GenerateResource.Cache
 R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.dll
 R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.pdb
+=======
+C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.dll
+C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.pdb
+<<<<<<< HEAD
+=======
+C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\BLL\bin\Debug\BLL.dll
+C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\BLL\bin\Debug\BLL.pdb
+C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\BLL\bin\Debug\DAL.dll
+C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\BLL\bin\Debug\EntitiesLayer.dll
+C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\BLL\bin\Debug\TIL.dll
+C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\BLL\bin\Debug\DAL.pdb
+C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\BLL\bin\Debug\EntitiesLayer.pdb
+C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\BLL\bin\Debug\TIL.pdb
+C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.Alerts.resources
+C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.Properties.Resources.resources
+C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.csproj.GenerateResource.Cache
+C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.dll
+C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.pdb
+>>>>>>> origin/Mathias
+>>>>>>> origin/Mathias

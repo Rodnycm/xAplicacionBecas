@@ -9,7 +9,20 @@ Public Class uCntrlBuscarBeneficio
         listarBeneficios()
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+
+        End Try
+
+
+
+=======
+        End Try
+>>>>>>> origin/Mathias
+
+>>>>>>> origin/Mathias
     End Sub
 
     ''' <summary>
@@ -35,6 +48,18 @@ Public Class uCntrlBuscarBeneficio
         Catch
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            FrmIniciarSesion.principal.Controls.Add(UCtrl)
+=======
+            Me.Controls.Add(UCtrl)
+>>>>>>> origin/Mathias
+            UCtrl.lblAlerta.Text = ex.Message
+            UCtrl.Location = New Point(300, 100)
+            UCtrl.BringToFront()
+            UCtrl.Show()
+>>>>>>> origin/Mathias
 
         End Try
 
@@ -50,6 +75,24 @@ Public Class uCntrlBuscarBeneficio
 
 
     End Sub
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    Private Sub btnMantenimiento_Click(sender As Object, e As EventArgs) Handles btnMantenimiento.Click
+        Dim uCtrlRegistrarBeneficio As New uCtrlRegistrarBeneficio
+
+        FrmIniciarSesion.principal.Controls.Add(uCtrlRegistrarBeneficio)
+        uCtrlRegistrarBeneficio.getFrmBuscar(Me)
+        uCtrlRegistrarBeneficio.Location = New Point(290, 48)
+        uCtrlRegistrarBeneficio.BringToFront()
+        uCtrlRegistrarBeneficio.Show()
+
+
+    End Sub
+=======
+
+>>>>>>> origin/Mathias
+>>>>>>> origin/Mathias
     ''' <summary>
     ''' Este método agarra el valor seleccionado del combobox y crea un evento
     ''' </summary>
