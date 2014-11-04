@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using EntitiesLayer;
 using DAL;
-using DAL.Repositories;
 
 namespace BLL
 {
@@ -12,104 +11,45 @@ namespace BLL
     public class GestorCarrera
     {
 
-        public void agregarCarrera(string nombre, string codigo, string color, string idDirector)
+        public void agregarCarrera(string nombre, string codigo, string color)
         {
-            Usuario director = UsuarioRepository.Instance.GetByNombre(idDirector);
-            Carrera carrera = ContenedorMantenimiento.Instance.crearObjetoCarrera(nombre, codigo, color, director);
-            try
-            {
-                if (carrera.IsValid)
-                {
-
-                    CarreraRepository.Instance.Insert(carrera);
-
-                }
-                else {
-
-                    StringBuilder sb = new StringBuilder();
-                    foreach (RuleViolation rv in carrera.GetRuleViolations())
-                    {
-                        sb.AppendLine(rv.ErrorMessage);
-                    }
-                    throw new ApplicationException(sb.ToString());
-                
-                }
-                
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-        }
-
-        public IEnumerable <Usuario> consultarDirectoresAcademicos() {
-
-            return UsuarioRepository.Instance.GetDirectoresAcademicos();
-        
-        }
-
-        public void modificarCarrera(string nombre, string codigo, string color, int idCarrera, string idDirector ,string directorAntiguo)
-        {
-            Usuario director = UsuarioRepository.Instance.GetByNombre(idDirector);
-            Usuario antiguo = UsuarioRepository.Instance.GetByNombre(directorAntiguo);
-            Carrera carrera = ContenedorMantenimiento.Instance.crearObjetoCarrera(nombre, codigo, color, idCarrera, director);
 
             try
             {
-                if(carrera.IsValid){
-                    CarreraRepository.Instance.UpdateCarrera(carrera, antiguo);
-                }else{
-                    
-                    StringBuilder sb = new StringBuilder();
-                    foreach (RuleViolation rv in carrera.GetRuleViolations())
-                    {
-                        sb.AppendLine(rv.ErrorMessage);
-                    }
-                    throw new ApplicationException(sb.ToString());
-                }
-               
+                CarreraRepository.Instance.Insert(ContenedorMantenimiento.Instance.crearObjetoCarrera(nombre, codigo, color));
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
-                throw ex;
+                throw;
             }
         }
 
-        public Carrera buscarCarrera(String param)
+        public void modificarCarrera(string nombre, string codigo, string color, int idCarrera)
         {
-            return CarreraRepository.Instance.GetByNombre(param);
+
+            try
+            {
+                CarreraRepository.Instance.Update(ContenedorMantenimiento.Instance.crearObjetoCarrera(nombre, codigo, color, idCarrera));
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public void eliminarCarrera(String codigo)
         {
 
-            Carrera carrera = ContenedorMantenimiento.Instance.crearObjetoCarrera(codigo);
-
             try
             {
-                if (carrera.IsValid)
-                {
-
-                    CarreraRepository.Instance.Delete(carrera);
-                }
-                else {
-
-                    StringBuilder sb = new StringBuilder();
-                    foreach (RuleViolation rv in carrera.GetRuleViolations())
-                    {
-                        sb.AppendLine(rv.ErrorMessage);
-                    }
-                    throw new ApplicationException(sb.ToString());
-                
-                }
-                
+                CarreraRepository.Instance.Delete(ContenedorMantenimiento.Instance.crearObjetoCarrera(codigo));
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
-                throw ex;
+                throw;
             }
         }
 
@@ -127,5 +67,4 @@ namespace BLL
         }
     }
 }
-
 

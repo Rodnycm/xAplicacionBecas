@@ -14,6 +14,7 @@ namespace DAL.Repositories
 {
     public class TipoBecaRepository : IRepository<TipoBeca>
     {
+        private string actividad;
         private static TipoBecaRepository instance;
         private List<IEntity> _insertItems;
         private List<IEntity> _deleteItems;
@@ -269,6 +270,9 @@ namespace DAL.Repositories
 
                 DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_agregarTipoBeca");
 
+                actividad = "Se ha registrado un Beneficio";
+                registrarAccion(actividad);
+
             }
             catch (Exception ex)
             {
@@ -291,8 +295,10 @@ namespace DAL.Repositories
                 cmd.Parameters.Add(new SqlParameter("@estado", objTipoBeca.estado));
                 cmd.Parameters.Add(new SqlParameter("@descripcion", objTipoBeca.descripcion));
 
-
                 DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_modificarTipoBeca");
+
+                actividad = "Se ha modificado un Beneficio";
+                registrarAccion(actividad);
 
             }
             catch (Exception ex)
@@ -314,6 +320,9 @@ namespace DAL.Repositories
                 cmd.Parameters.Add(new SqlParameter("@", objTipoBeca.Id));
                 DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_eliminarTipoBeca");
 
+                actividad = "Se ha modificado un Beneficio";
+                registrarAccion(actividad);
+
             }
             catch (SqlException ex)
             {
@@ -326,6 +335,32 @@ namespace DAL.Repositories
                 //logear la excepcion a la bd con un Exception
                 //throw new DataAccessException("Ha ocurrido un error al eliminar un tipo de beca", ex);
             }
+        }
+
+        public void registrarAccion(string pactividad)
+        {
+
+            RegistroAccion objRegistro;
+            DateTime fecha = DateTime.Today;
+            string nombreUsuario = Globals.userName;
+            string nombreRol = Globals.userRol.Nombre;
+            string descripcion = pactividad;
+
+
+            objRegistro = new RegistroAccion(nombreUsuario, nombreRol, descripcion, fecha);
+
+            try
+            {
+
+                RegistroAccionRepository objRegistroRep = new RegistroAccionRepository();
+                objRegistroRep.InsertAccion(objRegistro);
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+
         }
     }
 }

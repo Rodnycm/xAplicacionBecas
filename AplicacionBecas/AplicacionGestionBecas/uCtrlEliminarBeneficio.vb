@@ -5,6 +5,7 @@
     Dim porcentaje As Double
     Dim aplicabilidad As String
     Dim uCtrl As uCntrlBuscarBeneficio
+    Dim mBlnFormDragging As Boolean
 
 
     ''' <summary>
@@ -48,9 +49,31 @@
 
     Private Sub btnAceptar_Click(sender As Object, e As EventArgs) Handles btnAceptar.Click
 
-        objGestorBeneficio.eliminarBeneficio(id, nombre, porcentaje, aplicabilidad)
-        MsgBox("beneficio eliminado")
-        objGestorBeneficio.guardarCambios()
+        Try
+
+            objGestorBeneficio.eliminarBeneficio(id, nombre, porcentaje, aplicabilidad)
+            objGestorBeneficio.guardarCambios()
+            Dim Uctrl As uCtrlConfirmacion = New uCtrlConfirmacion
+            FrmIniciarSesion.principal.Controls.Add(Uctrl)
+            Uctrl.lblConfirmacion.Text = "El beneficio se eliminó correctamente"
+            Uctrl.Location = New Point(300, 100)
+            Uctrl.BringToFront()
+            Uctrl.Show()
+
+
+        Catch ex As Exception
+
+            Dim UCtrl As UCtrlAlerta = New UCtrlAlerta()
+
+            FrmIniciarSesion.principal.Controls.Add(UCtrl)
+            UCtrl.lblAlerta.Text = ex.Message
+            UCtrl.Location = New Point(250, 50)
+            UCtrl.BringToFront()
+            UCtrl.Show()
+
+
+
+        End Try
 
         uCtrl.dtaBuscarBeneficio.Rows.Clear()
         uCtrl.listarBeneficios()
@@ -72,4 +95,30 @@
         Me.Dispose()
         Me.Hide()
     End Sub
+
+    Private Sub uCtrlEliminarBeneficio_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseMove
+
+        If mBlnFormDragging = True Then
+
+            Dim position As Point = frmPrincipal.PointToClient(MousePosition)
+            Me.Location = New Point(position)
+
+        End If
+
+    End Sub
+
+    Private Sub uCtrlEliminarBeneficio_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseUp
+
+        mBlnFormDragging = False
+        Dim position As Point = frmPrincipal.PointToClient(MousePosition)
+        Location = New Point(position)
+
+    End Sub
+
+    Public Sub uCtrlEliminarBeneficio_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseDown
+
+        mBlnFormDragging = True
+
+    End Sub
+
 End Class

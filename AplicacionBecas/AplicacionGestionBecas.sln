@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "UI", "AplicacionGestionBecas\UI.vbproj", "{59E114ED-E593-438A-B226-DC0602321A71}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{91DFE6AB-6F17-4C5B-99FE-A59EE82E76EE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D9317EFC-F916-4E00-92A0-3EDC370D6FEA} = {D9317EFC-F916-4E00-92A0-3EDC370D6FEA}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntitiesLayer", "EntitiesLayer\EntitiesLayer.csproj", "{A4BCA628-FABE-4669-BD1F-DD99F26D9B68}"
 EndProject

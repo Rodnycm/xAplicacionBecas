@@ -74,16 +74,15 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CrearCursos.Designer.vb">
-      <DependentUpon>CrearCursos.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CrearCursos.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="DB_Proyecto2DataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DB_Proyecto2DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB_Proyecto2DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_Proyecto2DataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="DB_Proyecto2DataSetConsultarRegistroAcciones.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -161,6 +160,12 @@
     <Compile Include="uCtrlBuscarCursos.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="uCtrlConfirmacion.Designer.vb">
+      <DependentUpon>uCtrlConfirmacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uCtrlConfirmacion.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="uCtrlConsultarBeneficio.Designer.vb">
       <DependentUpon>uCtrlConsultarBeneficio.vb</DependentUpon>
     </Compile>
@@ -185,6 +190,12 @@
     <Compile Include="UctrlCrearUsuario.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="uCtrlCurso.Designer.vb">
+      <DependentUpon>uCtrlCurso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="uCtrlCurso.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="uCtrlEliminar.Designer.vb">
       <DependentUpon>uCtrlEliminar.vb</DependentUpon>
     </Compile>
@@ -195,12 +206,6 @@
       <DependentUpon>uCtrlEliminarBeneficio.vb</DependentUpon>
     </Compile>
     <Compile Include="uCtrlEliminarBeneficio.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="uCtrlEliminarCurso.Designer.vb">
-      <DependentUpon>uCtrlEliminarCurso.vb</DependentUpon>
-    </Compile>
-    <Compile Include="uCtrlEliminarCurso.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="uCtrlEliminarRol.Designer.vb">
@@ -287,12 +292,6 @@
     <Compile Include="uCtrlModificarCarrera.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="uCtrlModificarCurso.Designer.vb">
-      <DependentUpon>uCtrlModificarCurso.vb</DependentUpon>
-    </Compile>
-    <Compile Include="uCtrlModificarCurso.vb">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="uCtrlModificarRol.Designer.vb">
       <DependentUpon>uCtrlModificarRol.vb</DependentUpon>
     </Compile>
@@ -325,9 +324,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CrearCursos.resx">
-      <DependentUpon>CrearCursos.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmIniciarSesion.resx">
       <DependentUpon>FrmIniciarSesion.vb</DependentUpon>
     </EmbeddedResource>
@@ -342,6 +338,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="uCntrlBuscarBeneficio.resx">
       <DependentUpon>uCntrlBuscarBeneficio.vb</DependentUpon>
     </EmbeddedResource>
@@ -363,6 +360,9 @@
     <EmbeddedResource Include="uCtrlBuscarCursos.resx">
       <DependentUpon>uCtrlBuscarCursos.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="uCtrlConfirmacion.resx">
+      <DependentUpon>uCtrlConfirmacion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="uCtrlConsultarBeneficio.resx">
       <DependentUpon>uCtrlConsultarBeneficio.vb</DependentUpon>
     </EmbeddedResource>
@@ -375,14 +375,14 @@
     <EmbeddedResource Include="UctrlCrearUsuario.resx">
       <DependentUpon>UctrlCrearUsuario.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="uCtrlCurso.resx">
+      <DependentUpon>uCtrlCurso.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="uCtrlEliminar.resx">
       <DependentUpon>uCtrlEliminar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uCtrlEliminarBeneficio.resx">
       <DependentUpon>uCtrlEliminarBeneficio.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="uCtrlEliminarCurso.resx">
-      <DependentUpon>uCtrlEliminarCurso.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uCtrlEliminarRol.resx">
       <DependentUpon>uCtrlEliminarRol.vb</DependentUpon>
@@ -426,9 +426,6 @@
     <EmbeddedResource Include="uCtrlModificarCarrera.resx">
       <DependentUpon>uCtrlModificarCarrera.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="uCtrlModificarCurso.resx">
-      <DependentUpon>uCtrlModificarCurso.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="uCtrlModificarRol.resx">
       <DependentUpon>uCtrlModificarRol.vb</DependentUpon>
     </EmbeddedResource>
@@ -456,6 +453,17 @@
     </None>
     <None Include="DB_Proyecto2DataSet.xss">
       <DependentUpon>DB_Proyecto2DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DB_Proyecto2DataSet1.xsc">
+      <DependentUpon>DB_Proyecto2DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DB_Proyecto2DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_Proyecto2DataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_Proyecto2DataSet1.xss">
+      <DependentUpon>DB_Proyecto2DataSet1.xsd</DependentUpon>
     </None>
     <None Include="DB_Proyecto2DataSetConsultarRegistroAcciones.xsc">
       <DependentUpon>DB_Proyecto2DataSetConsultarRegistroAcciones.xsd</DependentUpon>

@@ -14,6 +14,7 @@ namespace DAL.Repositories
 {
     public class UsuarioRepository : IRepository<Usuario>
     {
+        private string actividad;
         private static UsuarioRepository instance;
         private List<IEntity> _insertItems;
         private List<IEntity> _deleteItems;
@@ -25,6 +26,7 @@ namespace DAL.Repositories
             _deleteItems = new List<IEntity>();
             _updateItems = new List<IEntity>();
         }
+
 
         //<summary> Método que se encarga de instanciar un UsuarioRepository</summary>
         //<author> Gabriela Gutiérrez Corrales </author> 
@@ -249,6 +251,8 @@ namespace DAL.Repositories
                 cmd.Parameters.Add(new SqlParameter("@contraseña", objUsuario.contraseña));
 
                 DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_crearUsuario");
+                actividad = "Se ha registrado un Usuario";
+                registrarAccion(actividad);
 
             }
             catch (Exception ex)
@@ -284,6 +288,8 @@ namespace DAL.Repositories
                 cmd.Parameters.Add(new SqlParameter("@contraseña", objUsuario.contraseña));
                 DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_modificarUsuario");
 
+                actividad = "Se ha Editado un Usuario";
+                registrarAccion(actividad);
             }
             catch (Exception ex)
             {
@@ -302,6 +308,9 @@ namespace DAL.Repositories
                 SqlCommand cmd = new SqlCommand();
                 cmd.Parameters.Add(new SqlParameter("@identificacion", objUsuario.identificacion));
                 DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_borrarUsuario");
+
+                actividad = "Se ha eliminado un Usuario";
+                registrarAccion(actividad);
 
             }
             catch (SqlException ex)
@@ -367,41 +376,31 @@ namespace DAL.Repositories
 
         }
 
-        public IEnumerable<Usuario> GetDirectoresAcademicos()
+        public void registrarAccion(string pactividad)
         {
-            List<Usuario> pusuario = null;
-            SqlCommand cmd = new SqlCommand();
-            DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_buscarDirectoresAcademicos");
-            Rol rolUsuario = null;
 
-            if (ds.Tables[0].Rows.Count > 0)
+            RegistroAccion objRegistro;
+            DateTime fecha = DateTime.Today;
+            string nombreUsuario = Globals.userName;
+            string nombreRol = Globals.userRol.Nombre;
+            string descripcion = pactividad;
+
+
+            objRegistro = new RegistroAccion(nombreUsuario, nombreRol, descripcion, fecha);
+
+            try
             {
-                pusuario = new List<Usuario>();
 
-                foreach (DataRow dr in ds.Tables[0].Rows)
-                {
-                    int rol = Convert.ToInt32(dr["Fk_Tb_Roles_Tb_Usuarios_IdRol"]);
-
-                    rolUsuario = RolRepository.Instance.GetById(rol);
-                    Usuario objUsuario = new Usuario
-                    {
-                        primerNombre = dr["PrimerNombre"].ToString(),
-                        segundoNombre = dr["SegundoNombre"].ToString(),
-                        primerApellido = dr["PrimerApellido"].ToString(),
-                        segundoApellido = dr["SegundoApellido"].ToString(),
-                        identificacion = dr["Identificacion"].ToString(),
-                        telefono = dr["Telefono"].ToString(),
-                        fechaNacimiento = Convert.ToDateTime(dr["FechaNacimiento"]),
-                        rol = rolUsuario,
-                        genero = Convert.ToInt32(dr["Genero"]),
-                        correoElectronico = dr["CorreoElectronico"].ToString(),
-                        contraseña = dr["Contraseña"].ToString(),
-                    };
-                    objUsuario.Id = Convert.ToInt32(dr["id"]);
-                    pusuario.Add(objUsuario);
-                }
+                RegistroAccionRepository objRegistroRep = new RegistroAccionRepository();
+                objRegistroRep.InsertAccion(objRegistro);
             }
-            return pusuario;
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+
         }
+
     }
 }

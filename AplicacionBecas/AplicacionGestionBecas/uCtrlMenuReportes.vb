@@ -4,10 +4,10 @@
 
         Dim uCtrl As New uCtrlReporteRegistroAcciones()
 
-        frmPrincipal.Controls.Add(uCtrl)
+        FrmIniciarSesion.principal.Controls.Add(uCtrl)
         uCtrl.Show()
         uCtrl.BringToFront()
-        uCtrl.Location = New Point(300, 50)
+        uCtrl.Location = New Point(170, 150)
         Me.Hide()
 
     End Sub
