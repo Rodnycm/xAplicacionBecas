@@ -342,6 +342,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
     <EmbeddedResource Include="uCntrlBuscarBeneficio.resx">
       <DependentUpon>uCntrlBuscarBeneficio.vb</DependentUpon>
     </EmbeddedResource>
