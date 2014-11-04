@@ -7,3 +7,11 @@ C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\EntitiesLayer\
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\EntitiesLayer\obj\Debug\EntitiesLayer.csprojResolveAssemblyReference.cache
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\EntitiesLayer\obj\Debug\EntitiesLayer.dll
 C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\EntitiesLayer\obj\Debug\EntitiesLayer.pdb
+<<<<<<< HEAD
+=======
+C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\EntitiesLayer\bin\Debug\EntitiesLayer.dll
+C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\EntitiesLayer\bin\Debug\EntitiesLayer.pdb
+C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\EntitiesLayer\obj\Debug\EntitiesLayer.csprojResolveAssemblyReference.cache
+C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\EntitiesLayer\obj\Debug\EntitiesLayer.dll
+C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\EntitiesLayer\obj\Debug\EntitiesLayer.pdb
+>>>>>>> origin/Mathias
