@@ -46,7 +46,7 @@ Public Class uCntrlBuscarBeneficio
 
             Dim UCtrl As UctrlAlerta = New UctrlAlerta()
 
-            FrmIniciarSesion.principal.Controls.Add(UCtrl)
+            Me.Controls.Add(UCtrl)
             UCtrl.lblAlerta.Text = ex.Message
             UCtrl.Location = New Point(300, 100)
             UCtrl.BringToFront()
