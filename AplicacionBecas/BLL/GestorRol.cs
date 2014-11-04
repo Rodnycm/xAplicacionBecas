@@ -9,7 +9,7 @@ using DAL.Repositories;
 
 namespace BLL
 {
-    public class GestorRol 
+    public class GestorRol:IGestor
     {
         public string actividad;
 

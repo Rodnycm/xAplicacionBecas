@@ -6,16 +6,14 @@ using System.Threading.Tasks;
 using EntitiesLayer;
 using DAL;
 using DAL.Repositories;
-using TIL;
-using System.Data.SqlClient;
 
 
 namespace BLL
 {
-    public class GestorBeneficios
+    public class GestorBeneficios:IGestor
     {
         public string actividad;
-
+    
         //private BeneficioRepository repBeneficio;
         /// <summary>
         /// Este método recive los parametros necesarios para instanciar un beneficio.
@@ -41,7 +39,8 @@ namespace BLL
                 {
 
                     BeneficioRepository.Instance.Insert(objBeneficio);
-
+                     actividad = "Se ha registrado un Beneficio";
+                    registrarAccion(actividad);
                 }
                 else
                 {
@@ -55,7 +54,12 @@ namespace BLL
             }
             catch (Exception e)
             {
-                throw e;
+
+
+                String error = e.ToString();
+
+                System.Console.Write(error);
+                throw new ApplicationException("Noooooo");
             }
         }
         /// <summary>
@@ -79,6 +83,8 @@ namespace BLL
                 if (objBeneficio.IsValid)
                 {
                     BeneficioRepository.Instance.Update(objBeneficio);
+                     actividad = "Se ha modificado un Beneficio";
+                    registrarAccion(actividad);
                 }
                 else
                 {
@@ -90,9 +96,10 @@ namespace BLL
                     throw new ApplicationException(sb.ToString());
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                throw e;
+
+                throw;
             }
         }
 
@@ -115,12 +122,13 @@ namespace BLL
             {
 
                 BeneficioRepository.Instance.Delete(objBeneficio);
+                 actividad = "Se ha eliminado un Beneficio";
+                    registrarAccion(actividad);
             }
 
-            catch (Exception e)
+            catch (Exception)
             {
-
-                throw e;
+                throw;
             }
         }
 
@@ -132,18 +140,19 @@ namespace BLL
 
         public void guardarCambios()
         {
-            try
-            {
-                BeneficioRepository.Instance.Save();
-            }
+            //try
+            //{
+            BeneficioRepository.Instance.Save();
+            //}
             //catch (DataAccessException ex)
             //{
             //    throw ex;
             //}
-            catch (Exception e)
-            {
-                throw e;
-            }
+            //catch (Exception ex)
+            //{
+            //    //logear a la bd
+            //    throw new BusinessLogicException("Ha ocurrido un error al eliminar un usuario", ex);
+            //}
         }
 
         /// <summary>
@@ -154,19 +163,7 @@ namespace BLL
 
         public IEnumerable<Beneficio> buscarBeneficios()
         {
-            try
-            {
-                return BeneficioRepository.Instance.GetAll();
-            }
-            //catch (DataAccessException ex)
-            //{
-            //    throw ex;
-            //}
-            catch (Exception e)
-            {
-                throw e;
-            }
-
+            return BeneficioRepository.Instance.GetAll();
         }
         /// <summary>
         /// Llama al método GetByNombre() del repositorio y recibe una instancia de un beneficio.
@@ -178,5 +175,26 @@ namespace BLL
         {
             return BeneficioRepository.Instance.GetByNombre(pnombre);
         }
+
+        public void registrarAccion(string pactividad)
+        {
+
+            RegistroAccion objRegistro;
+            DateTime fecha = DateTime.Today;
+            string nombreUsuario;
+            string nombreRol = "Decano";
+            string descripcion = pactividad;
+            //nombreUsuario = Globals.userName;
+            nombreUsuario = "Pedro";
+
+
+            objRegistro = new RegistroAccion(nombreUsuario, nombreRol, descripcion, fecha);
+
+            RegistroAccionRepository objRegistroRep = new RegistroAccionRepository();
+
+            objRegistroRep.InsertAccion(objRegistro);
+
+        }
+
     }
 }

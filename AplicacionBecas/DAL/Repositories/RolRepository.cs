@@ -13,7 +13,6 @@ namespace DAL.Repositories
 {
     public class RolRepository : IRepository<Rol>
     {
-        private string actividad;
         private static RolRepository instance;
         private List<IEntity> _insertItems;
         private List<IEntity> _deleteItems;
@@ -80,7 +79,7 @@ namespace DAL.Repositories
             List<Rol> pRol = null;
 
             SqlCommand cmd = new SqlCommand();
-            DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_listarRol");
+            DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_consultarRoles");
 
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -89,7 +88,7 @@ namespace DAL.Repositories
                 {
                     pRol.Add(new Rol
                     {
-                        Id = Convert.ToInt32(dr["IdRol"]),
+                        //Id = Convert.ToInt32(dr["IdRol"]),
                         Nombre = dr["Nombre"].ToString()
                     });
                 }
@@ -238,9 +237,6 @@ namespace DAL.Repositories
                 cmd.Parameters.Add(new SqlParameter("@Nombre", objRol.Nombre));
                 DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_agregarRol");
 
-
-                actividad = "Se ha registrado un Rol";
-                registrarAccion(actividad);
             }
             catch (Exception ex)
             {
@@ -264,9 +260,6 @@ namespace DAL.Repositories
                 cmd.Parameters.Add(new SqlParameter("@Nombre", objRol.Nombre));
                 DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_modificarRol");
 
-
-                actividad = "Se ha Editado un Rol";
-                registrarAccion(actividad);
             }
             catch (Exception ex)
             {
@@ -285,10 +278,6 @@ namespace DAL.Repositories
                 cmd.Parameters.Add(new SqlParameter("@IdRol", objRol.Id));
                 DataSet ds = DBAccess.ExecuteSPWithDS(ref cmd, "Sp_eliminarRol");
 
-
-                actividad = "Se ha Eliminado un Rol";
-                registrarAccion(actividad);
-
             }
             catch (SqlException ex)
             {
@@ -303,32 +292,6 @@ namespace DAL.Repositories
                 //logear la excepcion a la bd con un Exception
                 //throw new DataAccessException("Ha ocurrido un error al eliminar un usuario", ex);
             }
-        }
-
-        public void registrarAccion(string pactividad)
-        {
-
-            RegistroAccion objRegistro;
-            DateTime fecha = DateTime.Today;
-            string nombreUsuario = Globals.userName;
-            string nombreRol = Globals.userRol.Nombre;
-            string descripcion = pactividad;
-
-
-            objRegistro = new RegistroAccion(nombreUsuario, nombreRol, descripcion, fecha);
-
-            try
-            {
-
-                RegistroAccionRepository objRegistroRep = new RegistroAccionRepository();
-                objRegistroRep.InsertAccion(objRegistro);
-            }
-            catch (Exception e)
-            {
-
-                throw e;
-            }
-
         }
 
     }

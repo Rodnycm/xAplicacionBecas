@@ -6,12 +6,9 @@ Public Class uCntrlBuscarBeneficio
 
     Private Sub PantallaConsultarBeneficio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Try
-            listarBeneficios()
+        listarBeneficios()
 
-        Catch
 
-        End Try
 
     End Sub
 
@@ -22,9 +19,7 @@ Public Class uCntrlBuscarBeneficio
     ''' <author>Mathias Muller</author>
     Public Sub listarBeneficios()
 
-
         Try
-
 
             Dim listaBeneficios As New List(Of Beneficio)
             listaBeneficios = objGestorBeneficio.buscarBeneficios()
@@ -37,23 +32,24 @@ Public Class uCntrlBuscarBeneficio
                 dtaBuscarBeneficio.Columns("dtaId").Visible = False
 
             Next
+        Catch
 
-        Catch ex As Exception
 
-            Dim UCtrl As UctrlAlerta = New UctrlAlerta()
-
-            Me.Controls.Add(UCtrl)
-            UCtrl.lblAlerta.Text = ex.Message
-            UCtrl.Location = New Point(300, 100)
-            UCtrl.BringToFront()
-            UCtrl.Show()
 
         End Try
 
+    End Sub
+    Private Sub btnMantenimiento_Click(sender As Object, e As EventArgs) Handles btnMantenimiento.Click
+        Dim uCtrlRegistrarBeneficio As New uCtrlRegistrarBeneficio
+
+        frmPrincipal.Controls.Add(uCtrlRegistrarBeneficio)
+        uCtrlRegistrarBeneficio.getFrmBuscar(Me)
+        uCtrlRegistrarBeneficio.Location = New Point(290, 48)
+        uCtrlRegistrarBeneficio.BringToFront()
+        uCtrlRegistrarBeneficio.Show()
 
 
     End Sub
-
     ''' <summary>
     ''' Este método agarra el valor seleccionado del combobox y crea un evento
     ''' </summary>
@@ -105,7 +101,7 @@ Public Class uCntrlBuscarBeneficio
         End If
 
     End Sub
-
+    
     '//////////////////////////////////////////////////////////////////////////////////////////
     'El ASIGNAR AHORA LO HACE MARIA, NO VA AQUI EN BENEFICIOS!!!!
 
@@ -122,21 +118,21 @@ Public Class uCntrlBuscarBeneficio
     '//////////////////////////////////////////////////////////////////////////////////////////
 
     ''' <summary>
-    ''' Muestra un beneficio en un data gird
+    ''' 
     ''' </summary>
     ''' <remarks></remarks>
     Private Sub verBeneficios()
-
         Dim nombre As String = dtaBuscarBeneficio.CurrentRow.Cells(1).Value
-        dtaBuscarBeneficio.Rows.Clear()
-        Dim objBeneficio As Beneficio = New Beneficio
-        objBeneficio = objGestorBeneficio.buscarPorNombre(nombre)
 
+        Dim uCtrlConsultarBeneficio As New uCtrlConsultarBeneficio
 
-        dtaBuscarBeneficio.Rows.Add(objBeneficio.Id, objBeneficio.Nombre, objBeneficio.Porcentaje, objBeneficio.Aplicacion)
-        dtaBuscarBeneficio.Columns("dtaId").Visible = False
-        dtaBuscarBeneficio.Columns("dtaOpciones").Visible = False
-        dtaBuscarBeneficio.Columns("dtaAplicabilidad").Visible = True
+        uCtrlConsultarBeneficio.recibirInfo(nombre)
+        frmPrincipal.Controls.Add(uCtrlConsultarBeneficio)
+        uCtrlConsultarBeneficio.BringToFront()
+        uCtrlConsultarBeneficio.Show()
+        uCtrlConsultarBeneficio.Location = New Point(200, 150)
+        Me.Hide()
+
 
     End Sub
 
@@ -158,7 +154,7 @@ Public Class uCntrlBuscarBeneficio
         Dim uCtrlModificarBeneficio As New uCtrlModificarBeneficio
 
 
-        FrmIniciarSesion.principal.Controls.Add(uCtrlModificarBeneficio)
+        frmPrincipal.Controls.Add(uCtrlModificarBeneficio)
         uCtrlModificarBeneficio.getFrmBuscar(Me)
         uCtrlModificarBeneficio.recieveData(id, nombre, porcentaje, aplicacion)
         uCtrlModificarBeneficio.BringToFront()
@@ -184,9 +180,8 @@ Public Class uCntrlBuscarBeneficio
 
         Dim uCtrlEliminarBeneficio As New uCtrlEliminarBeneficio
 
-        FrmIniciarSesion.principal.Controls.Add(uCtrlEliminarBeneficio)
+        frmPrincipal.Controls.Add(uCtrlEliminarBeneficio)
         uCtrlEliminarBeneficio.getUCtrlInstance(Me)
-        uCtrlEliminarBeneficio.lblEliminar.Text = "¿Esta seguro que desea eliminar el beneficio?"
         uCtrlEliminarBeneficio.recibirInfo(id, nombre, porcentaje, aplicacion)
         uCtrlEliminarBeneficio.BringToFront()
         uCtrlEliminarBeneficio.Show()
