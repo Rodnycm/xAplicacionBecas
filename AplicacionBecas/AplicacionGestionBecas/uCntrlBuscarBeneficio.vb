@@ -8,21 +8,6 @@ Public Class uCntrlBuscarBeneficio
 
         listarBeneficios()
 
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-
-        End Try
-
-
-
-=======
-        End Try
->>>>>>> origin/Mathias
-
->>>>>>> origin/Mathias
     End Sub
 
     ''' <summary>
@@ -45,39 +30,20 @@ Public Class uCntrlBuscarBeneficio
                 dtaBuscarBeneficio.Columns("dtaId").Visible = False
 
             Next
-        Catch
+        Catch ex As Exception
 
+            Dim Uctrl As UctrlAlerta = New UctrlAlerta
+            Me.Controls.Add(Uctrl)
+            Uctrl.lblAlerta.Text = ex.Message
+            Uctrl.Location = New Point(300, 100)
+            Uctrl.BringToFront()
+            Uctrl.Show()
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            FrmIniciarSesion.principal.Controls.Add(UCtrl)
-=======
-            Me.Controls.Add(UCtrl)
->>>>>>> origin/Mathias
-            UCtrl.lblAlerta.Text = ex.Message
-            UCtrl.Location = New Point(300, 100)
-            UCtrl.BringToFront()
-            UCtrl.Show()
->>>>>>> origin/Mathias
 
         End Try
 
     End Sub
-    Private Sub btnMantenimiento_Click(sender As Object, e As EventArgs) Handles btnMantenimiento.Click
-        Dim uCtrlRegistrarBeneficio As New uCtrlRegistrarBeneficio
 
-        frmPrincipal.Controls.Add(uCtrlRegistrarBeneficio)
-        uCtrlRegistrarBeneficio.getFrmBuscar(Me)
-        uCtrlRegistrarBeneficio.Location = New Point(290, 48)
-        uCtrlRegistrarBeneficio.BringToFront()
-        uCtrlRegistrarBeneficio.Show()
-
-
-    End Sub
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     Private Sub btnMantenimiento_Click(sender As Object, e As EventArgs) Handles btnMantenimiento.Click
         Dim uCtrlRegistrarBeneficio As New uCtrlRegistrarBeneficio
 
@@ -89,10 +55,7 @@ Public Class uCntrlBuscarBeneficio
 
 
     End Sub
-=======
 
->>>>>>> origin/Mathias
->>>>>>> origin/Mathias
     ''' <summary>
     ''' Este método agarra el valor seleccionado del combobox y crea un evento
     ''' </summary>

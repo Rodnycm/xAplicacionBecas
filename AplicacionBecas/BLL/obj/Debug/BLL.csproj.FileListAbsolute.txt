@@ -93,10 +93,6 @@ R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.csproj.Genera
 R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.dll
 R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.pdb
 =======
-C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.dll
-C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.pdb
-<<<<<<< HEAD
-=======
 C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\BLL\bin\Debug\BLL.dll
 C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\BLL\bin\Debug\BLL.pdb
 C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\BLL\bin\Debug\DAL.dll
@@ -111,5 +107,4 @@ C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\BLL\obj\Debug
 C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.csproj.GenerateResource.Cache
 C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.dll
 C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.pdb
->>>>>>> origin/Mathias
 >>>>>>> origin/Mathias

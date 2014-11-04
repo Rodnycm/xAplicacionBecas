@@ -335,18 +335,10 @@ C:\Users\Prophet\Desktop\xAplicacionBecas\AplicacionBecas\AplicacionGestionBecas
 C:\Users\Prophet\Desktop\xAplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.xml
 C:\Users\Prophet\Desktop\xAplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.pdb
 =======
-C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.vbproj.GenerateResource.Cache
-C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\RdlCompile.cache
-C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\RdlCompile.compiled
-C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.exe
-C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.xml
-C:\Users\Mathias\Documents\GitHub\AplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.pdb
 C:\Users\Mathias\Documents\GitHub\SistemaDeBecasV2\AplicacionBecas\AplicacionGestionBecas\bin\Debug\UI.exe.config
-<<<<<<< HEAD
 C:\Users\Mathias\Documents\GitHub\SistemaDeBecasV2\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.exe
 C:\Users\Mathias\Documents\GitHub\SistemaDeBecasV2\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.xml
 C:\Users\Mathias\Documents\GitHub\SistemaDeBecasV2\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.pdb
-=======
 >>>>>>> origin/Mathias
 C:\Users\Mathias\Documents\GitHub\SistemaDeBecasV2\AplicacionBecas\AplicacionGestionBecas\bin\Debug\UI.exe
 C:\Users\Mathias\Documents\GitHub\SistemaDeBecasV2\AplicacionBecas\AplicacionGestionBecas\bin\Debug\UI.pdb
@@ -400,12 +392,6 @@ C:\Users\Mathias\Documents\GitHub\SistemaDeBecasV2\AplicacionBecas\AplicacionGes
 C:\Users\Mathias\Documents\GitHub\SistemaDeBecasV2\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.vbproj.GenerateResource.Cache
 C:\Users\Mathias\Documents\GitHub\SistemaDeBecasV2\AplicacionBecas\AplicacionGestionBecas\obj\Debug\RdlCompile.cache
 C:\Users\Mathias\Documents\GitHub\SistemaDeBecasV2\AplicacionBecas\AplicacionGestionBecas\obj\Debug\RdlCompile.compiled
-<<<<<<< HEAD
-=======
-C:\Users\Mathias\Documents\GitHub\SistemaDeBecasV2\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.exe
-C:\Users\Mathias\Documents\GitHub\SistemaDeBecasV2\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.xml
-C:\Users\Mathias\Documents\GitHub\SistemaDeBecasV2\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.pdb
->>>>>>> origin/Mathias
 R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\AplicacionGestionBecas\bin\Debug\UI.exe.config
 R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\AplicacionGestionBecas\bin\Debug\UI.exe
 R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\AplicacionGestionBecas\bin\Debug\UI.pdb
@@ -460,11 +446,9 @@ R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debu
 R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.vbproj.GenerateResource.Cache
 R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\RdlCompile.cache
 R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\RdlCompile.compiled
-<<<<<<< HEAD
 R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.exe
 R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.xml
 R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.pdb
-=======
 C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\AplicacionGestionBecas\bin\Debug\UI.exe.config
 C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.exe
 C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.xml
@@ -521,5 +505,3 @@ C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\AplicacionGes
 C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.vbproj.GenerateResource.Cache
 C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\RdlCompile.cache
 C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\RdlCompile.compiled
->>>>>>> origin/Mathias
->>>>>>> origin/Mathias
