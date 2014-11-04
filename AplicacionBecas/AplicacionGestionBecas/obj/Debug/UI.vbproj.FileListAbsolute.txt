@@ -169,11 +169,6 @@ C:\Users\Mathias\Documents\GitHub\SistemaDeBecasV2\AplicacionBecas\AplicacionGes
 C:\Users\Mathias\Documents\GitHub\SistemaDeBecasV2\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.vbproj.GenerateResource.Cache
 C:\Users\Mathias\Documents\GitHub\SistemaDeBecasV2\AplicacionBecas\AplicacionGestionBecas\obj\Debug\RdlCompile.cache
 C:\Users\Mathias\Documents\GitHub\SistemaDeBecasV2\AplicacionBecas\AplicacionGestionBecas\obj\Debug\RdlCompile.compiled
-<<<<<<< HEAD
-=======
-C:\Users\Mathias\Documents\GitHub\SistemaDeBecasV2\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.exe
-C:\Users\Mathias\Documents\GitHub\SistemaDeBecasV2\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.xml
-C:\Users\Mathias\Documents\GitHub\SistemaDeBecasV2\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.pdb
 R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\AplicacionGestionBecas\bin\Debug\UI.exe.config
 R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.exe
 R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.xml
@@ -286,4 +281,3 @@ C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\AplicacionGes
 C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\UI.vbproj.GenerateResource.Cache
 C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\RdlCompile.cache
 C:\Users\Mathias\Documents\GitHub\xAplicacionBecas\AplicacionBecas\AplicacionGestionBecas\obj\Debug\RdlCompile.compiled
->>>>>>> origin/Mathias
