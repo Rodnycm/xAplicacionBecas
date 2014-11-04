@@ -77,3 +77,17 @@ C:\Users\Prophet\Desktop\AplicacionBecas\AplicacionBecas\AplicacionBecas\Aplicac
 C:\Users\Prophet\Desktop\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.csproj.GenerateResource.Cache
 C:\Users\Prophet\Desktop\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.dll
 C:\Users\Prophet\Desktop\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.pdb
+R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\BLL\bin\Debug\BLL.dll
+R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\BLL\bin\Debug\BLL.pdb
+R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\BLL\bin\Debug\DAL.dll
+R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\BLL\bin\Debug\EntitiesLayer.dll
+R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\BLL\bin\Debug\TIL.dll
+R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\BLL\bin\Debug\DAL.pdb
+R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\BLL\bin\Debug\EntitiesLayer.pdb
+R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\BLL\bin\Debug\TIL.pdb
+R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.Alerts.resources
+R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.Properties.Resources.resources
+R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.csproj.GenerateResource.Cache
+R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.dll
+R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\BLL\obj\Debug\BLL.pdb

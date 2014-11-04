@@ -62,3 +62,14 @@ C:\Users\Prophet\Desktop\AplicacionBecas\AplicacionBecas\AplicacionBecas\Aplicac
 C:\Users\Prophet\Desktop\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
 C:\Users\Prophet\Desktop\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.dll
 C:\Users\Prophet\Desktop\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.pdb
+R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\DAL\bin\Debug\DAL.dll
+R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\DAL\bin\Debug\DAL.pdb
+R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\DAL\bin\Debug\EntitiesLayer.dll
+R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\DAL\bin\Debug\TIL.dll
+R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\DAL\bin\Debug\EntitiesLayer.pdb
+R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\DAL\bin\Debug\TIL.pdb
+R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.Properties.Resources.resources
+R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.csproj.GenerateResource.Cache
+R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.dll
+R:\Horus\GitHub\xAplicacionBecas\AplicacionBecas\DAL\obj\Debug\DAL.pdb
